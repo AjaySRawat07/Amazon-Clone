@@ -7,7 +7,6 @@ import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/amazonSlice";
-import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 const Products = () => {
@@ -27,15 +26,6 @@ const Products = () => {
         quantity: 1,
       })
     );
-    toast.success("Added to Cart!", {
-      position: "top-center",
-      autoClose: 1000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
   };
 
   return (
@@ -109,7 +99,6 @@ const Products = () => {
           </div>
         </div>
       ))}
-      <ToastContainer />
     </div>
   );
 };
